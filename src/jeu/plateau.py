@@ -76,7 +76,14 @@ def get_meneur_jeu_type(tab):
 
     return TYPE_BLACK
 
+def get_score_ForMinMax(tab):
 
+    distribution = get_cellule_distribution(tab)
+
+    return distribution[TYPE_WHITE] - distribution[TYPE_BLACK]
+
+
+    
 def est_rempli(tab):
     return get_cellule_distribution(tab)[TYPE_EMPTY] == 0
 
